@@ -2,92 +2,90 @@
   <div>
     <form @submit.prevent="id ? update() : save()">
       <div>
-        <p>Adı: {{ footballSurvey.name }}</p>
+        <p>{{ $t('footballSurvey.name') }}: {{ footballSurvey.name }}</p>
         <input
-          type="text"
-          required
-          v-model="footballSurvey.name"
-          placeholder="adınızı giriniz.."
+            type="text"
+            required
+            v-model="footballSurvey.name"
+            placeholder="adınızı giriniz.."
         />
       </div>
       <div>
-        <p>Soyadı: {{ footballSurvey.surname }}</p>
+        <p>{{ $t('footballSurvey.surname') }}: {{ footballSurvey.surname }}</p>
         <input
-          type="text"
-          required
-          v-model="footballSurvey.surname"
-          placeholder="soyadınızı giriniz.."
+            type="text"
+            required
+            v-model="footballSurvey.surname"
+            placeholder="soyadınızı giriniz.."
         />
       </div>
       <div>
-        <p>Cinsiyet: {{ footballSurvey.gender }}</p>
+        <p>{{ $t('footballSurvey.gender') }}: {{ footballSurvey.gender }}</p>
         <input
-          type="number"
-          min="0"
-          max="1"
-          required
-          v-model="footballSurvey.gender"
-          placeholder="kadın için 0 erkek için 1 giriniz.."
+            type="number"
+            min="0"
+            max="1"
+            required
+            v-model="footballSurvey.gender"
+            placeholder="kadın için 0 erkek için 1 giriniz.."
         />
       </div>
       <div>
-        <p>Doğum tarihi giriniz: {{ footballSurvey.dateOfBirth }}</p>
+        <p>{{ $t('footballSurvey.dateOfBirth') }}: {{ footballSurvey.dateOfBirth }}</p>
         <input
-          type="date"
-          required
-          v-model="footballSurvey.dateOfBirth"
-          placeholder="doğum tarihi gir yyyy-mm-dd.."
+            type="date"
+            required
+            v-model="footballSurvey.dateOfBirth"
+            placeholder="doğum tarihi gir yyyy-mm-dd.."
         />
       </div>
       <div>
-        <p>
-          Tuttuğunuz takımı giriniz: {{ footballSurvey.favoriteFootballTeam }}
-        </p>
+        <p>{{ $t('footballSurvey.favoriteFootballTeam') }}: {{ footballSurvey.favoriteFootballTeam }}</p>
         <input
-          type="text"
-          required
-          v-model="footballSurvey.favoriteFootballTeam"
-          placeholder="tuttuğunuz takımı giriniz.."
+            type="text"
+            required
+            v-model="footballSurvey.favoriteFootballTeam"
+            placeholder="tuttuğunuz takımı giriniz.."
         />
       </div>
       <div>
-        <p>Açıklama giriniz: {{ footballSurvey.description }}</p>
+        <p>{{ $t('footballSurvey.description') }}: {{ footballSurvey.description }}</p>
         <input
-          type="text"
-          required
-          v-model="footballSurvey.description"
-          placeholder="açıklama giriniz.."
+            type="text"
+            required
+            v-model="footballSurvey.description"
+            placeholder="açıklama giriniz.."
         />
       </div>
       <div>
-        <p>Anketörün adını giriniz: {{ footballSurvey.pollster.name }}</p>
+        <p>{{ $t('footballSurvey.pollsterName') }}: {{ footballSurvey.pollster.name }}</p>
         <input
-          type="text"
-          required
-          v-model="footballSurvey.pollster.name"
-          placeholder="anketörün adını giriniz.."
+            type="text"
+            required
+            v-model="footballSurvey.pollster.name"
+            placeholder="anketörün adını giriniz.."
         />
       </div>
       <div>
-        <p>Anketörün soyadını giriniz: {{ footballSurvey.pollster.surname }}</p>
+        <p>{{ $t('footballSurvey.pollsterSurname') }}: {{ footballSurvey.pollster.surname }}</p>
         <input
-          type="text"
-          required
-          v-model="footballSurvey.pollster.surname"
-          placeholder="anketörün soyadını giriniz.."
+            type="text"
+            required
+            v-model="footballSurvey.pollster.surname"
+            placeholder="anketörün soyadını giriniz.."
         />
       </div>
-
       <div>
-        <button type="submit">Kaydet</button>
+        <button type="submit">{{ $t('footballSurvey.save') }}</button>
       </div>
     </form>
-    <router-link :to="{ name: 'homePage' }">Ana Sayfaya Dön</router-link>
+    <router-link :to="{ name: 'homePage' }">{{ $t('footballSurvey.backHomePage') }}</router-link>
   </div>
 </template>
 
 <script>
 import apiService from "@/apis/http-common";
+
 export default {
   name: "FootballSurvey",
   data() {
@@ -111,38 +109,38 @@ export default {
   methods: {
     save() {
       apiService
-        .post("football-survey/save", this.footballSurvey)
-        .then((response) => {
-          console.log(response);
-          this.$router.push("/");
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+          .post("football-survey/save", this.footballSurvey)
+          .then((response) => {
+            console.log(response);
+            this.$router.push("/");
+          })
+          .catch((error) => {
+            console.log(error);
+          });
     },
 
     update() {
       apiService
-        .put("football-survey/update", this.footballSurvey)
-        .then((response) => {
-          console.log(response);
-          this.$router.push("/");
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+          .put("football-survey/update", this.footballSurvey)
+          .then((response) => {
+            console.log(response);
+            this.$router.push("/");
+          })
+          .catch((error) => {
+            console.log(error);
+          });
     },
 
     getFootballSurvey(id) {
       apiService
-        .get("football-survey/" + id)
-        .then((response) => {
-          console.log(response);
-          this.footballSurvey = response.data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+          .get("football-survey/" + id)
+          .then((response) => {
+            console.log(response);
+            this.footballSurvey = response.data;
+          })
+          .catch((error) => {
+            console.log(error);
+          });
     },
   },
 

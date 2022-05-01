@@ -7,7 +7,6 @@ export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
-
         {
             path: '/',
             name: 'homePage',
@@ -43,7 +42,5 @@ export default new Router({
             name: 'lifeSurveyList',
             component: () => import(/* webpackChunkName: "lifeSurveyList" */ '@/view/LifeSurveyList')
         },
- 
-
     ]
 });

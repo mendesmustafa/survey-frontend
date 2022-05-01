@@ -1,21 +1,15 @@
 <template>
-
   <div>
-    <h1>Anket Toplama Merkezi</h1>
-    <router-link :to="{ name: 'footballSurveySave' }">Tuttuğunuz Futbol Takımı Anketi Ekle</router-link>
-    <router-link :to="{ name: 'footballSurveyList' }">
-      Tuttuğunuz Futbol Takımı Anketi Listesine Git
-    </router-link>
-    <router-link :to="{ name: 'lifeSurveySave' }">Hayatınızdan Memnun Musunuz Anketi Ekle</router-link>
-    <router-link :to="{ name: 'lifeSurveyList' }">Hayatınızdan Memnun Musunuz Anketi Listesine Git</router-link>
+    <h1>{{ $t('home.surveyCollectionCenter') }}</h1>
+    <router-link :to="{ name: 'footballSurveySave' }">{{ $t('home.addFavoriteFootballTeamSurvey') }}</router-link>
+    <router-link :to="{ name: 'footballSurveyList' }">{{ $t('home.goSurveyListToFavoriteFootballTeam') }}</router-link>
+    <router-link :to="{ name: 'lifeSurveySave' }">{{ $t('home.addSurveyForAreYouHappyYourLife') }}</router-link>
+    <router-link :to="{ name: 'lifeSurveyList' }">{{ $t('home.goSurveyListToAreYouHappyYourLife') }}</router-link>
   </div>
-
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style>

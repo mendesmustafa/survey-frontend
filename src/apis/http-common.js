@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const apiService = axios.create({
-  baseURL: "http://localhost:8080",
-  headers: {
-    "Content-type": "application/json"
-  }
+    baseURL: process.env.VUE_APP_BASE_URL,
+    headers: {
+        "Content-type": "application/json"
+    }
 });
 export default apiService;

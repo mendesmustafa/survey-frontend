@@ -1,0 +1,67 @@
+{
+  "home": {
+    "surveyCollectionCenter": "Anket Toplama Merkezi",
+    "addFavoriteFootballTeamSurvey": "Tuttuğunuz Futbol Takımı Anketi Ekle",
+    "goSurveyListToFavoriteFootballTeam": "Tuttuğunuz Futbol Takımı Anketi Listesine Git",
+    "addSurveyForAreYouHappyYourLife": "Hayatınızdan Memnun Musunuz Anketi Ekle",
+    "goSurveyListToAreYouHappyYourLife": "Hayatınızdan Memnun Musunuz Anketi Listesine Git"
+  },
+  "footballSurvey": {
+    "name": "Adı",
+    "surname": "Soyadı",
+    "gender": "Cinsiyet",
+    "dateOfBirth": "Doğum Tarihi",
+    "favoriteFootballTeam": "Tuttuğunuz Takım",
+    "description": "Açıklama",
+    "pollsterName": "Anketörün Adı",
+    "pollsterSurname": "Anketörün Soyadı",
+    "save": "Kaydet",
+    "backHomePage": "Ana Sayfaya Dön",
+    "list": {
+      "id": "ID",
+      "name": "ADI",
+      "surname": "SOYADI",
+      "gender": "CİNSİYETİ",
+      "dateOfBirth": "DOĞUM TARİHİ",
+      "favoriteFootballTeam": "FAVORİ TAKIMI",
+      "description": "AÇIKLAMA",
+      "pollsterId": "ANKETÇİ ID",
+      "pollsterName": "ANKETÇİ ADI",
+      "pollsterSurname": "ANKETÇİ SOYADI",
+      "edit": "düzenle",
+      "delete": "sil",
+      "addNewFavoriteFootballTeamSurvey": "Yeni Tuttuğunuz Futbol Takımı Anketi Ekle",
+      "backHomePage": "Ana Sayfaya Dön"
+    }
+  },
+  "lifeSurvey": {
+    "name": "Adı",
+    "surname": "Soyadı",
+    "gender": "Cinsiyet",
+    "dateOfBirth": "Doğum Tarihi",
+    "happinessRate": "Mutluluk oranını giriniz",
+    "whatMakesYouHappy": "Sizi en mutlu eden şeyi giriniz",
+    "whatMakesYouUnhappy": "Sizi en mutsuz eden şeyi giriniz",
+    "description": "Açıklama giriniz",
+    "pollsterName": "Anketörün adını giriniz",
+    "pollsterSurname": "Anketörün soyadını giriniz",
+    "save": "Kaydet",
+    "backHomePage": "ana sayfaya dön",
+    "list": {
+      "id": "ID",
+      "name": "ADI",
+      "surname": "SOYADI",
+      "gender": "CİNSİYETİ",
+      "dateOfBirth": "DOĞUM TARİHİ",
+      "favoriteFootballTeam": "FAVORİ TAKIMI",
+      "description": "AÇIKLAMA",
+      "pollsterId": "ANKETÇİ ID",
+      "pollsterName": "ANKETÇİ ADI",
+      "pollsterSurname": "ANKETÇİ SOYADI",
+      "edit": "düzenle",
+      "delete": "sil",
+      "addNewLifeSurvey": "Yeni Yaşam Anketi Ekle",
+      "backHomePage": "Ana Sayfaya Dön"
+    }
+  }
+}
